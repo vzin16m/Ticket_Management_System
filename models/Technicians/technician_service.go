@@ -1,8 +1,12 @@
 package models
 
 import (
+	"fmt"
+
 	"github.com/google/uuid"
 )
+
+var ErrNotFound = fmt.Errorf("not found")
 
 func (t *TechnicianStore) CreateTechnician(name string, email string) error {
 	tec := &Technician{
